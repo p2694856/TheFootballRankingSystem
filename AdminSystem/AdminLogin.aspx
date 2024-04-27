@@ -9,7 +9,7 @@
         body {
             border: hidden;
             height : max-content;
-            background-image: url('https://thesuperleague.com/assets/images/slider/bg/01_Hero8_Chelsea.jpg');
+            background-image: url('../images/StadiumMono.jpg');
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
@@ -35,6 +35,11 @@
         box-shadow: 0px 0px 8px #7bc1f7;         
         background-color: #FFF2FF;         
    }
+   .btn5:hover{
+    
+    transform:scale(1.1);
+    
+}
 
      .btn5 {
     border-radius: 5px;
@@ -42,13 +47,20 @@
     border-radius: 5px;
     box-shadow: 1px 2px 5px #666;
  }
+         img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 40%;
+}
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <br />
-            <img src="https://i.imgur.com/SphRQzL.png" alt="Logo" style="width:1080px;height:128px;"/>
+            <img src="../images/Logo.png" alt="Logo" />
             <h1 style="color:white;">Login</h1>
             <h3 style="color:white;">Username<asp:TextBox CssClass="Txtstyle4" ID="TextBox1" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>

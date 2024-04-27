@@ -9,7 +9,7 @@
 
 body {
     height : max-content;
-  background-image: url('https://thesuperleague.com/assets/images/slider/bg/01_Hero8_Chelsea.jpg');
+  background-image: url('../images/Stadium.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -20,7 +20,7 @@ p {text-align: center;}
   margin-left: auto;
   margin-right: auto;
   width: 80%;
-  height: 30%;
+  height: 40%;
 }
 div {align-self: center;
      margin-left: auto;
@@ -37,7 +37,11 @@ h1 {text-align: center}
     box-shadow: 1px 2px 5px #666;
  }
 
-
+.btn5:hover{
+    
+    transform:scale(1.1);
+    
+}
 
  
 
@@ -52,11 +56,14 @@ h1 {text-align: center}
  <br />
             
                 <h1 style="color:white;">Welcome to</h1>
-                <img src="https://i.imgur.com/SphRQzL.png" alt="Logo"/>
+                <img src="../images/Logo.png" alt="Logo"/>
                 <p style="color:white;">Login Or Register Here</p>
                 <asp:Button CssClass="btn5" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" Style="margin-left:auto; display:block; margin-right: auto; font-size: large; font-family: Arial, Helvetica, sans-serif; font-style: normal; color: #FFFFFF; background-color: #000000; " Height="33px" Width="78px"/>
             <br />
                 <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" Width="120px"/>
+        <br />
+    <asp:Button CssClass="btn5" ID="btnAdmin" runat="server" OnClick="btnAdmin_Click" Text="Admin" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" Width="120px"/>
+        
         </div>
     </form>
 </body>

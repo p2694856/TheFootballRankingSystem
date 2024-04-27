@@ -14,7 +14,7 @@
     }
   body {
   height : max-content;
-  background-image: url('https://thesuperleague.com/assets/images/slider/bg/01_Hero8_Chelsea.jpg');
+  background-image: url('../images/Stadium.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
@@ -48,13 +48,14 @@
    .RankStyle{
        font-family:'OCR A';
    }
+
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
             <br />
-            <img src="https://i.imgur.com/SphRQzL.png" alt="Logo" />
+            <img src="../images/Logo.png" alt="Logo" />
             <br />
             
             <h1 style="color:white;">

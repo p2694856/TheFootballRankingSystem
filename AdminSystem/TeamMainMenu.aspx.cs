@@ -14,6 +14,11 @@ public partial class TeamMainMenu : System.Web.UI.Page
 
     protected void btnRegister_Click(object sender, EventArgs e)
     {
+        Response.Redirect("RegisterPage.aspx");
+    }
 
+    protected void btnAdmin_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AdminLogin.aspx");
     }
 }

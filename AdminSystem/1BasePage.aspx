@@ -8,7 +8,7 @@
     <style>
   body {
   height : max-content;
-  background-image: url('https://thesuperleague.com/assets/images/slider/bg/01_Hero8_Chelsea.jpg');
+  background-image: url('../images/Stadium.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
