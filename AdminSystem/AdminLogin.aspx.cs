@@ -11,4 +11,9 @@ public partial class _1_ConfirmDelete : System.Web.UI.Page
     {
 
     }
+
+    protected void btnRegister_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("AdminRegister.aspx");
+    }
 }

@@ -1,9 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminLogin.aspx.cs" Inherits="_1_ConfirmDelete" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminRegister.aspx.cs" Inherits="_1_DataEntry" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+head runat="server">
     <title></title>
     <style>
         body {
@@ -66,12 +66,14 @@
             </h3>
             <h3 style="color:white;">Last Name<asp:TextBox CssClass="Txtstyle4" ID="txtLName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
-            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="Password" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="txtPassword" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            </h3>
+            <h3 style="color:white;">AdminCode<asp:TextBox CssClass="Txtstyle4" ID="txtAdminCode" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
             <br />
-            <asp:Button CssClass="btn5" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px"/> 
+            <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnLogin_Click" Text="Register" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px"/> 
             <br />
-            <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register Instead" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" /> 
+            <asp:Button CssClass="btn5" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login Instead" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" /> 
             <br />
             <br />
             <br />
