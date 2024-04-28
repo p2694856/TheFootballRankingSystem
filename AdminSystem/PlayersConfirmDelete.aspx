@@ -26,7 +26,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="lblDeleteThis" runat="server" Text="ARE YOU SURE YOU WANT TO DELETE THIS RECORD?"></asp:Label>
+            <asp:Label ID="lblDeleteThis" runat="server" Text="ARE YOU SURE YOU WANT TO DELETE THIS RECORD?" ForeColor="White"></asp:Label>
             <br />
             <br />
             <asp:Button ID="btnYes" runat="server" OnClick="btnYes_Click" Text="Yes" />

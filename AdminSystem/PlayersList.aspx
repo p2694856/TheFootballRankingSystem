@@ -40,9 +40,11 @@
             <asp:Button ID="btnAdd" runat="server" OnClick="btnAdd_Click" Text="Add" />
             <asp:Button ID="btnEdit" runat="server" OnClick="btnEdit_Click" Text="Edit" />
             <asp:Button ID="btnDelete" runat="server" OnClick="btnDelete_Click" Text="Delete" />
+            
             <br />
             <br />
-            Enter a name<asp:TextBox ID="txtFilter" runat="server" ></asp:TextBox>
+            <asp:Label ID="Name" runat="server" Text="Enter a Name" ForeColor="White"></asp:Label>
+            <asp:TextBox ID="txtFilter" runat="server"></asp:TextBox>
             <br />
             <br />
             <br />
@@ -51,7 +53,7 @@
             <br />
             <br />
             <br />
-            <asp:Label ID="lblError" runat="server" ></asp:Label>
+            <asp:Label ID="lblError" runat="server" ForeColor="White"></asp:Label>
             <br />
             <br />
             <asp:Button ID="VoteToZero" runat="server" Text="Reset The Votes" BorderColor="Red" OnClick="VoteToZero_Click"  />
