@@ -45,6 +45,8 @@ public partial class _1Viewer : System.Web.UI.Page
                 string DecryptedPassword = Encryptor.Decrypt(EPassword, Encryptor.keyvalue);
                 if (Password == DecryptedPassword)
                 {
+                    Session["UserName"] = Username;
+                    Session["VotingPoint"] = Register.VotingPoint;
                     Response.Redirect("HomePage.aspx");
                 }
                 else

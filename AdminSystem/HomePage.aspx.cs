@@ -11,7 +11,22 @@ public partial class _1Viewer : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+         //creates instance of class
+        clsRegister Register = new clsRegister();
+        //get data from session
+        Register = (clsRegister)Session["UserName"];
+        //displays the data
+        lblUsername = Response.Write(Register.Username);
+
+        if (Register.Username  != null)
+        {
+            Register = (clsRegister)Session["VotingPoint"];
+            Response.Write(Register.VotingPoint);
+        }
+        else
+        {
+            Response.Redirect("LoginPage.aspx");
+        }
     }
 
     protected string GetRank(int index)
