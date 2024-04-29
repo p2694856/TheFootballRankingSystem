@@ -48,44 +48,15 @@ namespace ClassLibrary
         }
 
 
-        public clsRegisterCollection()
+        public int MakeVote(string Username)
         {
-
-
-
-
             clsDataConnection DB = new clsDataConnection();
-            DB.Execute("sproc_tblUserLogin_SelectAll");
-            PopulateArray(DB);
-
-
+            DB.AddParameter("@Username", Username);
+            return DB.Execute("sproc_tblUserLogin_VoteMade");
         }
 
 
-        void PopulateArray(clsDataConnection DB)
-        {
-            Int32 Index = 0;
-            Int32 RecordCount = 0;
-
-            mRegisterList = new List<clsRegister>();
-            RecordCount = DB.Count;
-
-            while (Index < RecordCount)
-            {
-                clsRegister Register = new clsRegister();
-
-
-                Register.Username = Convert.ToString(DB.DataTable.Rows[Index]["Username"]);
-                Register.Password = Convert.ToString(DB.DataTable.Rows[Index]["Password"]);
-
-
-
-                mRegisterList.Add(Register);
-                Index++;
-
-            }
-
-        }
+       
 
             public int Add()
         {

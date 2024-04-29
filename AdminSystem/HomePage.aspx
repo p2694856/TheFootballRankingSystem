@@ -62,7 +62,8 @@
                 Rankings can be found here
             </h1>
             <div>
-                
+               <asp:Label ID="lblUsername" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
+                <asp:Label ID="lblVotingPoint" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" DataSourceID="SqlDataSource1" CssClass="Table" HorizontalAlign="Center" OnRowCommand="Grid_RowCommand" Height="316px" Width="590px"  >
                     <Columns>
                         
@@ -94,14 +95,14 @@
                     </Columns>
                     
                     
-                    <HeaderStyle Font-Bold="True" ForeColor="White" Font-Size="Large"/>
+                    <HeaderStyle Font-Bold="True" ForeColor="White" Font-Size="Large" />
                     
                     
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:p2694856ConnectionString %>" SelectCommand="SELECT [Name], [Team], [Nationality], [Position], [TotalPoints] FROM [tblPlayers] ORDER BY [TotalPoints] DESC, [PlayerID], [Name]"></asp:SqlDataSource>
                 
             </div>
-            <asp:Label ID="lblResult" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lblResult" runat="server" Text="" Style="margin-left:auto; display:block; margin-right: auto; text-align:center; color:white; font-size:medium"></asp:Label>
             
             <br />
             
