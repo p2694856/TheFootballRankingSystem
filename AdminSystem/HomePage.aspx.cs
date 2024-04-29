@@ -15,24 +15,30 @@ public partial class _1Viewer : System.Web.UI.Page
         clsRegister Register = new clsRegister();
         //get data from session
         Register = (clsRegister)Session["UserName"];
-        if (Register != null)
-        {   //displays the data
-            lblUsername.Text = "Username: " + Register.Username;
-            Register.Find(Register.Username);
 
-            lblVotingPoint.Text = "Voting Point: " + Register.VotingPoint;
+        
 
-            
+            if (Register != null)
+            {   //displays the data
+                
+                lblUsername.Text = "Username: " + Register.Username;
+                Register.Find(Register.Username);
 
-        }
-        else
-        {
-            Response.Redirect("LoginPage.aspx");
-        }
+                lblVotingPoint.Text = "Voting Point: " + Register.VotingPoint;
+                
+               
+            } 
+        
+            else
+            {
+                Response.Redirect("LoginPage.aspx");
+            }
+        
     }
 
         protected string GetRank(int index)
         {
+        //Switch code obtained from stack overflow
             switch (index)
             {
 

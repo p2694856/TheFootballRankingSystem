@@ -54,6 +54,7 @@ public partial class _1_List : System.Web.UI.Page
                     Register.Password = Encryptor.Encrypt(Password, Encryptor.keyvalue);
                     RegisterList.ThisRegister = Register;
                     RegisterList.Add();
+                    Session["UserName"] = Register;
                     //navigate the viewers page
                     Response.Redirect("HomePage.aspx");
                 }

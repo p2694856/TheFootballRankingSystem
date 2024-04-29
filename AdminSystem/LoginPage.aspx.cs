@@ -14,30 +14,8 @@ public partial class _1Viewer : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!IsPostBack)
-        {
-            
-        }
-        else
-        {
-            clsRegister Register = new clsRegister();
-            //get data from session
-            Register = (clsRegister)Session["UserName"];
-            if (Register != null)
-            {
-                Register = null;
-
-                Session["UserName"] = null;
-
-
-            }
-           
-        }
-
-
-
+        
     }
-
     protected void btnLogin_Click(object sender, EventArgs e)
     {
         clsRegister Register = new clsRegister();  
@@ -69,6 +47,8 @@ public partial class _1Viewer : System.Web.UI.Page
                     Session["UserName"] = Register;
                     
                     Response.Redirect("HomePage.aspx");
+
+
                 }
                 else
                 {

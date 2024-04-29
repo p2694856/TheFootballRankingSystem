@@ -61,7 +61,7 @@
         <div>
             <br />
             <img src="../images/Logo.png" alt="Logo" />
-            <h1 style="color:white;">Login</h1>
+            <h1 style="color:white;">Register</h1>
             <h3 style="color:white;">First Name<asp:TextBox CssClass="Txtstyle4" ID="txtFName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
             <h3 style="color:white;">Last Name<asp:TextBox CssClass="Txtstyle4" ID="txtName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
