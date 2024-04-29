@@ -66,7 +66,7 @@
             </h3>
             <h3 style="color:white;">Last Name<asp:TextBox CssClass="Txtstyle4" ID="txtLName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
-            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="Password" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="txtPassword" runat="server" TextType="Password" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
             <br />
             <asp:Button CssClass="btn5" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px"/> 
@@ -74,6 +74,7 @@
             <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register Instead" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" /> 
             <br />
             <br />
+            <asp:Label ID="lblError" runat="server" Text="" Style="margin-left:auto; display:block; margin-right: auto; text-align:center; color:white; font-size:medium"></asp:Label>
             <br />
             <br />
         </div>

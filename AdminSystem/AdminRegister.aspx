@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-head runat="server">
+<head runat="server">
     <title></title>
     <style>
         body {
@@ -64,18 +64,21 @@ head runat="server">
             <h1 style="color:white;">Login</h1>
             <h3 style="color:white;">First Name<asp:TextBox CssClass="Txtstyle4" ID="txtFName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
-            <h3 style="color:white;">Last Name<asp:TextBox CssClass="Txtstyle4" ID="txtLName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            <h3 style="color:white;">Last Name<asp:TextBox CssClass="Txtstyle4" ID="txtName" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
-            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="txtPassword" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            <h3 style="color:white;">Password<asp:TextBox CssClass="Txtstyle4" ID="txtPassword" TextMode="Password" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
+            </h3>
+            <h3 style="color:white;">Confirm Password<asp:TextBox CssClass="Txtstyle4" ID="txtCPassword" TextMode="Password" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
             <h3 style="color:white;">AdminCode<asp:TextBox CssClass="Txtstyle4" ID="txtAdminCode" runat="server" Style="margin-left:auto; display:block; margin-right: auto;"></asp:TextBox>
             </h3>
             <br />
-            <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnLogin_Click" Text="Register" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px"/> 
+            <asp:Button CssClass="btn5" ID="btnRegister" runat="server" OnClick="btnRegister_Click" Text="Register" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px"/> 
             <br />
             <asp:Button CssClass="btn5" ID="btnLogin" runat="server" OnClick="btnLogin_Click" Text="Login Instead" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" /> 
             <br />
             <br />
+            <asp:Label ID="lblError" runat="server" Text="" Style="margin-left:auto; display:block; margin-right: auto; text-align:center; color:white; font-size:medium"></asp:Label>
             <br />
             <br />
         </div>

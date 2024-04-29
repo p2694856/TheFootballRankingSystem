@@ -96,5 +96,16 @@ namespace ClassLibrary
             DB.AddParameter("Password", mThisRegister.Password);
             return DB.Execute("sproc_tblUserLogin_Insert");
         }
+
+        public int AddAdmin()
+        {
+            clsDataConnection DB = new clsDataConnection();
+
+
+            DB.AddParameter("FirstName", mThisRegister.FirstName);
+            DB.AddParameter("LastName", mThisRegister.LastName);
+            DB.AddParameter("Password", mThisRegister.Password);
+            return DB.Execute("sproc_tblAdminLogin_Insert");
+        }
     }
 }
