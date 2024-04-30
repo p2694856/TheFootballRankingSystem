@@ -75,13 +75,19 @@ public partial class _1Viewer : System.Web.UI.Page
 
                 if (Exists)
                 {
+                    
                     clsRegisterCollection ThisVote = new clsRegisterCollection();
                     PlayersList.ThisPlayers = Players;
                     PlayersList.AddVote();
-                    
                     ThisVote.MakeVote(Username);
-                    lblVotingPoint.Text = "Voting Point: " + Register.VotingPoint;
+
+                    lblVotingPoint.Text = "Voting Point: " + Register.VotingPoint.ToString();
+
                     GridView1.DataBind();
+                    lblVotingPoint.DataBind();
+                    GridView2.DataBind();
+                    GridView3.DataBind();
+
 
                 }
                 else
@@ -105,8 +111,18 @@ public partial class _1Viewer : System.Web.UI.Page
 
 
 
-    
 
 
-   
+
+
+
+    protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
+
+    protected void SqlDataSource2_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+    {
+
+    }
 }
