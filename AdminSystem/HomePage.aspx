@@ -74,14 +74,18 @@
             <h1 style="color:white;">
                 Rankings can be found here
             </h1>
+            
+            <asp:Label ID="lblUsername" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
+                <asp:Label ID="lblVotingPoint" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
+            <br />    
+            <asp:Button CssClass="btn5" ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" Style="margin-left:auto; display:block; margin-right: auto;  font-size: large; font-family: Arial, Helvetica, sans-serif; color: #FFFFFF; background-color: #000000;" Height="33px" Width="120px"/>
             <br />
             <h2 style="color:white;">
             Player Rankings
             </h2>
             <div>
 
-               <asp:Label ID="lblUsername" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
-                <asp:Label ID="lblVotingPoint" runat="server" Text="" Font-Size="Large" Font-Bold="true" ForeColor="WhiteSmoke" CssClass="RankStyle" Style="margin-left:auto; display:block; margin-right: auto; text-align:center;"></asp:Label>
+               
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="3" DataSourceID="SqlDataSource1" CssClass="Table" HorizontalAlign="Center" OnRowCommand="Grid_RowCommand" Height="316px" Width="590px"  >
                     <Columns>
                         
@@ -123,6 +127,9 @@
             <asp:Label ID="lblResult" runat="server" Text="" Style="margin-left:auto; display:block; margin-right: auto; text-align:center; color:white; font-size:medium"></asp:Label>
             
             <br />
+            <h2 style="color:white;">
+                More Rankings Available Below
+            </h2>
             <br />
             <h2 style="color:white;">
             Team Rankings

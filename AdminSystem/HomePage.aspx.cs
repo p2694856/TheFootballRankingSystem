@@ -110,7 +110,13 @@ public partial class _1Viewer : System.Web.UI.Page
 
 
 
+    protected void btnLogout_Click(object sender, EventArgs e)
+    {
+        
+        Session["UserName"] = null;
+        Response.Redirect("TeamMainMenu.aspx");
 
+    }
 
 
 
@@ -125,4 +131,6 @@ public partial class _1Viewer : System.Web.UI.Page
     {
 
     }
+
+    
 }

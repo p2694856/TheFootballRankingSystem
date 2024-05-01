@@ -17,6 +17,7 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+
         Response.Redirect("AdminLogin.aspx");
     }
 
@@ -74,7 +75,10 @@ public partial class _1_DataEntry : System.Web.UI.Page
                             RegisterList.ThisRegister = Register;
                             RegisterList.AddAdmin();
                             //navigate the viewers page
+
+                            Session["Admin"] = 1;
                             Response.Redirect("PlayersList.aspx");
+
                         }
 
 

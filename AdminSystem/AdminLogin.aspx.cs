@@ -39,6 +39,7 @@ public partial class _1_ConfirmDelete : System.Web.UI.Page
                 string DecryptedPassword = Encryptor.Decrypt(EPassword, Encryptor.keyvalue);
                 if (Password == DecryptedPassword)
                 {
+                    Session["Admin"] = 1;
                     Response.Redirect("PlayersList.aspx");
                 }
                 else

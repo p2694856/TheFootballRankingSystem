@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceModel.Channels;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -14,6 +15,23 @@ public partial class _1_List : System.Web.UI.Page
         {
             DisplayPlayers();
         }
+
+        if (Session["Admin"] == null)
+        {
+            Response.Redirect("TeamMainMenu.aspx");
+        }
+
+    }
+    protected string GetRank(int index)
+    {
+        //Switch code obtained from stack overflow
+        switch (index)
+        {
+
+            default:
+                return (index).ToString();
+        }
+
 
     }
     void DisplayPlayers()
@@ -98,5 +116,11 @@ public partial class _1_List : System.Web.UI.Page
         clsPlayersCollection PlayersList = new clsPlayersCollection();
 
         PlayersList.ToZero();
+    }
+
+    protected void btnLogOut_Click(object sender, EventArgs e)
+    {
+        Session["Admin"] = null;
+        Response.Redirect("TeamMainMenu.aspx");
     }
 }
