@@ -17,13 +17,14 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
     protected void btnLogin_Click(object sender, EventArgs e)
     {
-
+        //redirect admin login
         Response.Redirect("AdminLogin.aspx");
     }
 
     protected void btnRegister_Click(object sender, EventArgs e)
     {
         clsRegister Register = new clsRegister();
+        //collects the strng
         
         string FirstName = txtFName.Text;
         string LastName = txtFName.Text;
@@ -31,9 +32,9 @@ public partial class _1_DataEntry : System.Web.UI.Page
         string ConfirmPassword = txtCPassword.Text;
 
         int AdminCode = 0;
-
+        // if code is integer check
         bool AdminCodeIsInt = int.TryParse(txtAdminCode.Text, out AdminCode);
-
+        //validation
         string Error = "";
 
        
@@ -66,22 +67,24 @@ public partial class _1_DataEntry : System.Web.UI.Page
 
                         if (Exists == true)
                         {
+                            //validation
                             lblError.Text = "Name already exists please try adding a number to you name";
                         }
                         else
                         {
+                            //encrypts data
                             Encryptor Encryptor = new Encryptor();
                             Register.Password = Encryptor.Encrypt(Password, Encryptor.keyvalue);
                             RegisterList.ThisRegister = Register;
                             RegisterList.AddAdmin();
-                            //navigate the viewers page
+                            //navigate the player list page
 
                             Session["Admin"] = 1;
                             Response.Redirect("PlayersList.aspx");
 
                         }
 
-
+                        //validation
                     }
                     else
                     {

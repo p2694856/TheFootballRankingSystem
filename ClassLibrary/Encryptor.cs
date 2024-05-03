@@ -13,6 +13,7 @@ namespace ClassLibrary
 
     public class Encryptor
     {
+        //
 
         public string keyvalue = "abcede0123456789";
         public static string Encrypt(string data, string key)

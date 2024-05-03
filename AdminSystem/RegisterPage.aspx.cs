@@ -14,7 +14,7 @@ public partial class _1_List : System.Web.UI.Page
     {
         clsRegister Register = new clsRegister();
 
-        
+        //collects strings
         string Username = txtUsername.Text;
         string Password = txtPassword.Text;
         string ConfirmPassword = txtCPassword.Text;
@@ -22,7 +22,7 @@ public partial class _1_List : System.Web.UI.Page
 
 
         string Error = "";
-
+        //validation
         Error = Register.Valid(Username, Password);
         if (Password == ConfirmPassword)
         {
@@ -50,6 +50,7 @@ public partial class _1_List : System.Web.UI.Page
                 }
                 else
                 {
+                    //encrypts password
                     Encryptor Encryptor = new Encryptor();
                     Register.Password = Encryptor.Encrypt(Password, Encryptor.keyvalue);
                     RegisterList.ThisRegister = Register;
@@ -63,12 +64,14 @@ public partial class _1_List : System.Web.UI.Page
             }
             else
             {
+                //validation
                 lblError.Text = Error;
             }
 
         }
         else
         {
+            //validation
             lblError.Text = "Password and Confirm Password do not match please check and try again";
         }
 

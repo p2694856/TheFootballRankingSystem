@@ -31,6 +31,8 @@ public partial class _1Viewer : System.Web.UI.Page
         
             else
             {
+            //redirects login page if there are no cookies
+
                 Response.Redirect("LoginPage.aspx");
             }
         
@@ -50,37 +52,41 @@ public partial class _1Viewer : System.Web.UI.Page
         }
         protected void Grid_RowCommand(object sender, GridViewCommandEventArgs e)
         {
-
+        //load the cookies if retrieved
         clsRegister Register = new clsRegister();
         Register = (clsRegister)Session["UserName"];
         Register.Find(Register.Username);
+        //logs current vote count
         int Vote = Register.VotingPoint;
         string Username = Register.Username;
+        //if button is clicked 
         if (e.CommandName == "VoteForPlayer")
             {
-
+            //if vote is more than 1
             if (Vote > 0)
             {
+                //retrives the row
+
                 int rowIndex = Convert.ToInt32(e.CommandArgument);
 
                 string playerName = GridView1.Rows[rowIndex].Cells[1].Text;
 
                 clsPlayers Players = new clsPlayers();
-
+                // collects player name
                 Players.Name = playerName;
 
                 clsPlayersCollection PlayersList = new clsPlayersCollection();
-
+                //finds the player
                 bool Exists = Players.FindName(playerName);
-
+                //if founds
                 if (Exists)
                 {
-                    
+                    //makes the vote
                     clsRegisterCollection ThisVote = new clsRegisterCollection();
                     PlayersList.ThisPlayers = Players;
                     PlayersList.AddVote();
                     ThisVote.MakeVote(Username);
-
+                    //updates the tables and voting point quantity
                     lblVotingPoint.Text = "Voting Point: " + Register.VotingPoint.ToString();
 
                     GridView1.DataBind();
@@ -92,12 +98,14 @@ public partial class _1Viewer : System.Web.UI.Page
                 }
                 else
                 {
+                    //validation
                     lblResult.Text = "error";
                 }
 
             }
             else
             {
+                //validation
                 lblResult.Text = "You have Ran Out of Voting Points please wait till they are refreshed";
             }
 
@@ -112,7 +120,7 @@ public partial class _1Viewer : System.Web.UI.Page
 
     protected void btnLogout_Click(object sender, EventArgs e)
     {
-        
+        //redirects to main menu
         Session["UserName"] = null;
         Response.Redirect("TeamMainMenu.aspx");
 
